@@ -1,6 +1,6 @@
-import knex from "knex";
-const options = require("./knexfile.js");
+import knex from 'knex';
+import options from './knexfile.js';
 
-const dbSetup = knex(options.development);
+const dbSetup = knex(options);
 
 export default dbSetup;
