@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
     "migrate:latest": "npx knex migrate:latest --knexfile src/db/knexfile.js --migrations-directory migrations",
     "migrate:down": "npx knex migrate:down --knexfile src/db/knexfile.js",
     "seed": "npx knex seed:run --knexfile src/db/knexfile.js"
@@ -14,6 +15,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "knex": "^2.3.0",
+    "objection": "^3.0.1",
     "pg": "^8.8.0"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
-const { faker } = require('@faker-js/faker');
+import { faker } from '@faker-js/faker';
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.seed = async function(knex) {
+export async function seed(knex) {
   // Deletes ALL existing entries
   await knex('users').del()
 
@@ -15,4 +15,4 @@ exports.seed = async function(knex) {
         })
   }
   await knex('users').insert(users);
-};
+}
